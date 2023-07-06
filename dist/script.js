@@ -16,16 +16,6 @@ headerMenu.onclick = function () {
 	headerMenuIcon.classList.toggle("fa-xmark");
 };
 
-// Header Links Effects
-
-link[0].classList.add("effect");
-link.forEach(function (el) {
-	el.onclick = function () {
-		link.forEach((el) => el.classList.remove("effect"));
-		el.classList.add("effect");
-	};
-});
-
 // go to up arrow
 
 let scrollBtn = document.getElementById("scroll");
@@ -42,7 +32,7 @@ window.onscroll = function () {
 };
 
 // Contact us copy
-// event.target.innerHTML
+
 contactInfo.forEach(function (el) {
 	el.onclick = function (event) {
 		document.execCommand(event.target.innerHTML.trim());

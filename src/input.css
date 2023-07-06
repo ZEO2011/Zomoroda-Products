@@ -51,9 +51,6 @@
 	header .container nav li {
 		@apply text-2xl !relative;
 	}
-	header nav ul li.effect::before {
-		@apply hidden xd:block content-[""] !absolute bg-main-200 w-[120px] h-[5px] bottom-[-44px] right-1/2 translate-x-1/2;
-	}
 	header nav .appear {
 		@apply transition-all flex flex-col absolute top-full left-0 w-full py-12 px-24 gap-12 bg-slate-50/50 h-fit;
 	}
