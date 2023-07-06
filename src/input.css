@@ -1,0 +1,94 @@
+/* Libraries */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global Rules */
+
+@layer base {
+	* {
+		@apply box-border capitalize m-0 p-0;
+	}
+
+	html {
+		@apply text-[80%];
+	}
+
+	body {
+		font-family: "Cairo", sans-serif;
+	}
+
+	img {
+		@apply max-w-full;
+	}
+
+	li {
+		@apply list-none;
+	}
+	p {
+		@apply text-gray-500;
+	}
+	section {
+		@apply h-[100vh];
+	}
+}
+
+/* Components */
+
+@layer base {
+	.main-header {
+		@apply font-bold text-5xl w-full text-center mt-16  xd:mb-8 mb-8;
+	}
+}
+
+/* Header */
+
+@layer base {
+	.container {
+		@apply h-[100vh] ml-auto mr-auto pl-4 pr-4 w-full h-full;
+	}
+	header .container nav li {
+		@apply text-2xl !relative;
+	}
+	header nav ul li.effect::before {
+		@apply hidden xd:block content-[""] !absolute bg-main-200 w-[120px] h-[5px] bottom-[-44px] right-1/2 translate-x-1/2;
+	}
+	header nav .appear {
+		@apply transition-all flex flex-col absolute top-full left-0 w-full py-12 px-24 gap-12 bg-slate-50/50 h-fit;
+	}
+	header nav .appear li {
+		@apply w-full h-full flex items-center justify-center border-b-8 border-main-200 bg-[eee] !relative;
+	}
+	header nav .appear li a {
+		@apply h-14 w-full flex items-center justify-center;
+	}
+}
+
+/* Main content */
+
+@layer base {
+	.main-content {
+		background: url(../dist/imgs/landing-bg.jpg) no-repeat;
+		background-size: cover;
+	}
+	.main-content img {
+		animation: bouncing 1s alternate infinite ease;
+	}
+	@keyframes bouncing {
+		from {
+			transform: translateY(-10px);
+		}
+		to {
+			transform: translateY(10px);
+		}
+	}
+}
+
+/* Products */
+
+@layer base {
+	.boxes {
+		grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+	}
+}
